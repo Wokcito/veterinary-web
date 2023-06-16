@@ -1,0 +1,286 @@
+.main {
+  background-color: $blanco;
+
+  margin-top: -2px;
+  padding-top: 10px;
+
+  .services {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-top: -60px;
+
+    .service {
+      display: flex;
+      flex-direction: column;
+
+      background-color: $blanco;
+      box-shadow: 0 0 10px 3px $sombra;
+
+      width: 77%;
+      max-width: 400px;
+      padding: 15px;
+      margin: 0 10px 20px;
+
+      &__img {
+        width: 100%;
+
+        border-radius: 8px;
+      }
+
+      &__title {
+        padding: 0 15px;
+        margin: 18px 0 0;
+        color: $azulmedio;
+      }
+
+      &__text {
+        padding: 0 15px;
+        margin: 10px 0;
+        color: $azul;
+      }
+
+      &__button {
+        padding: 10px 0 10px 15px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .whyus {
+    background-color: $gris;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding: 40px 10px;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &-title {
+        color: $azulmedio;
+        font-size: 35px;
+        padding: 7px 0;
+        margin: 0;
+
+        border-bottom: 1px solid $azulmedio;
+      }
+
+      &-text {
+        width: 80%;
+        max-width: 590px;
+        color: $azul;
+      }
+
+      &-solutions {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+
+        justify-items: start;
+
+        width: 70%;
+        max-width: 380px;
+      }
+
+      &-solution {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+
+        padding: 15px;
+
+        // border: 1px solid black;
+
+        i {
+          color: $rosa;
+          font-size: 30px;
+        }
+
+        h3 {
+          color: $azulmedio;
+          margin: 0;
+          font-size: 23px;
+          margin-top: 8px;
+        }
+
+        p {
+          color: $azul;
+          margin: 0;
+          font-size: 15px;
+        }
+      }
+    }
+
+    &__img {
+      background-image: url(../images/whyus.png);
+      background-size: cover;
+      background-position-x: -120px;
+      background-repeat: no-repeat;
+
+      border-radius: 8px;
+      box-shadow: 0 0 10px 3px $sombra;
+
+      width: 240px;
+      height: 240px;
+      margin: 20px;
+    }
+  }
+
+  .news {
+    background-color: $blanco;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    padding: 40px 0;
+
+    &__title {
+      color: $azulmedio;
+      font-size: 35px;
+      padding: 7px 0;
+      margin: 0;
+
+      border-bottom: 1px solid $azulmedio;
+    }
+
+    .articles {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      margin: 16px 0 0;
+      width: 100%;
+
+      .article {
+        display: flex;
+        flex-direction: column;
+
+        background-color: $blanco;
+
+        width: 80%;
+        padding: 15px 10px;
+        max-width: 400px;
+
+        margin: 10px;
+
+        box-shadow: 0 0 10px 3px $sombra;
+
+        &__img {
+          width: 100%;
+          border-radius: 8px;
+        }
+
+        &__info {
+          display: flex;
+
+          margin: 20px 0 10px;
+
+          font-size: 12px;
+
+          &-admin {
+            text-decoration: none;
+            color: $azul;
+
+            padding-left: 15px;
+          }
+
+          &-about {
+            text-decoration: none;
+            color: $azul;
+
+            padding-left: 15px;
+          }
+
+          i {
+            padding-right: 5px;
+            color: $rosa;
+          }
+        }
+
+        &__text {
+          margin: 0 0 10px;
+          padding: 0 15px;
+
+          font-size: 16px;
+          color: $azulmedio;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 330px) {
+  .main {
+    .whyus {
+      &__info {
+        &-title {
+          font-size: 40px;
+        }
+
+        &-solutions {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          justify-items: center;
+          width: 90%;
+        }
+
+        &-solution {
+          h3 {
+            font-size: 19px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+      &__img {
+        height: 280px;
+        width: 280px;
+      }
+    }
+
+    .news {
+      &__title {
+        font-size: 40px;
+      }
+
+      .articles {
+        .article {
+          &__info {
+            font-size: 14px;
+          }
+          &__text {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1240px) {
+  .main {
+    .services {
+      .service {
+        max-width: 260px;
+        margin: 0 10px 20px;
+      }
+    }
+
+    .whyus {
+      &__img {
+        height: 450px;
+        width: 450px;
+      }
+    }
+  }
+}

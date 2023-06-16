@@ -1,0 +1,183 @@
+.header {
+  background-image: url(../images/veterinary.jpg);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+
+  &__background {
+    background-color: rgba(40, 40, 40, 0.522);
+  }
+
+  &__nav {
+    background-color: rgba(40, 40, 40, 0.323);
+    box-shadow: 0 0 10px 8px rgba(40, 40, 40, 0.323);
+
+    color: $blanco;
+
+    &-contact {
+      display: flex;
+      justify-content: center;
+
+      width: 100%;
+      padding: 15px 0 10px;
+
+      font-size: 12px;
+
+      p {
+        padding: 0 5px;
+        margin: 0;
+      }
+      i {
+        padding-right: 5px;
+      }
+    }
+
+    &-social {
+      &-buttons {
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 180px;
+        padding: 3px 0 10px;
+        margin: auto;
+
+        list-style: none;
+
+        i {
+          color: $blanco;
+          font-size: 23px;
+        }
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 15px;
+
+    &-title {
+      margin: 10px 0 0;
+
+      color: $blanco;
+      font-size: 40px;
+    }
+
+    &-subtitle {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin: 0;
+        padding: 0 4px;
+        color: $blanco;
+
+        font-size: 15px;
+      }
+
+      h3 {
+        text-decoration: none;
+        color: $blanco;
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__wave {
+    margin-top: -50px;
+  }
+}
+
+.logo {
+  color: $blanco;
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+
+  border-bottom: 1px solid $blanco;
+  padding-bottom: 2px;
+
+  i {
+    color: $verde;
+    padding-right: 4px;
+  }
+}
+
+@media all and (min-width: 330px) {
+  .header {
+    &__nav {
+      &-contact {
+        font-size: 15px;
+      }
+    }
+
+    &__main {
+      &-title {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 620px) {
+  .header {
+    &__background {
+      height: 500px;
+    }
+
+    &__wave {
+      margin-top: 41px;
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-contact {
+        width: auto;
+
+        padding-left: 10px;
+      }
+
+      &-social {
+        &-buttons {
+          margin: 0;
+          padding: 0;
+          width: 130px;
+
+          i {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    &__main {
+      margin-top: 50px;
+
+      &-title {
+        font-size: 60px;
+      }
+
+      &-subtitle {
+        p {
+          font-size: 20px;
+        }
+
+        h3 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .logo {
+    font-size: 40px;
+  }
+}
